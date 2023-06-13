@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 6e53573dc37bacc4e8de4860b07215a8
+  - enabled: 1
+    path: Assets/Scenes/MapQuickplay.unity
+    guid: 6e7ab10a91870e7418660510fc171d8d
   m_configObjects: {}
