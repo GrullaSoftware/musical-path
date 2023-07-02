@@ -21,6 +21,10 @@ public class FirebaseRegisterManager : MonoBehaviour
     public TextMeshProUGUI ErrorMessage;
     private void Start()
     {
+        //Validator = GetComponent<ValidatorRegister>();
+    }
+    private void OnEnable()
+    {
         Validator = GetComponent<ValidatorRegister>();
     }
     private void Awake()

@@ -18,7 +18,11 @@ public class ValidatorLogin: MonoBehaviour
         EmailInputField.onValueChanged.AddListener( ValidateEmail );
         PasswordInputField.onValueChanged.AddListener(ValidatePassword);
     }
-
+    private void OnEnable()
+    {
+        EmailInputField.onValueChanged.AddListener(ValidateEmail);
+        PasswordInputField.onValueChanged.AddListener(ValidatePassword);
+    }
     public void ValidateEmail(string value)
     {
         if (value != null)

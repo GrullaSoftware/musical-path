@@ -15,7 +15,10 @@ public class ValidatorResetPassword: MonoBehaviour
         //Adds a listener to the main input field and invokes a method when the value changes.
         EmailInputField.onValueChanged.AddListener(ValidateEmail);
     }
-
+    private void OnEnable()
+    {
+        EmailInputField.onValueChanged.AddListener(ValidateEmail);
+    }
     public void ValidateEmail(string value)
     {
         if (value != null)

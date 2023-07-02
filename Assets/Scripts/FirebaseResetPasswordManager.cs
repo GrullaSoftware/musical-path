@@ -1,13 +1,10 @@
 using Firebase.Auth;
 using Firebase;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading.Tasks;
-using static UnityEditor.PlayerSettings;
-using System.Net.Mail;
+
 
 public class FirebaseResetPasswordManager: MonoBehaviour
 {
@@ -20,6 +17,10 @@ public class FirebaseResetPasswordManager: MonoBehaviour
     public TextMeshProUGUI SuccesMessage;
     private ValidatorResetPassword Validator;
     private void Start()
+    {
+        //Validator = GetComponent<ValidatorResetPassword>();
+    }
+    private void OnEnable()
     {
         Validator = GetComponent<ValidatorResetPassword>();
     }

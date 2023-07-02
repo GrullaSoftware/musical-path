@@ -19,12 +19,18 @@ public class ValidatorRegister: MonoBehaviour
     public void Start()
     {
         //Adds a listener to the main input field and invokes a method when the value changes.
+/*        EmailInputField.onValueChanged.AddListener(ValidateEmail);
+        PasswordInputField.onValueChanged.AddListener(ValidatePassword);
+        NameInputField.onValueChanged.AddListener(ValidateName);
+        ConfirmPasswordInputField.onValueChanged.AddListener(ValidateConfirmPassword);*/
+    }
+    private void OnEnable()
+    {
         EmailInputField.onValueChanged.AddListener(ValidateEmail);
         PasswordInputField.onValueChanged.AddListener(ValidatePassword);
         NameInputField.onValueChanged.AddListener(ValidateName);
         ConfirmPasswordInputField.onValueChanged.AddListener(ValidateConfirmPassword);
     }
-
     public void ValidateEmail(string value)
     {
         if (value != null)

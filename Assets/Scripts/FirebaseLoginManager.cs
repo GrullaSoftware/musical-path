@@ -20,6 +20,10 @@ public class FirebaseLoginManager : MonoBehaviour
     private ValidatorLogin Validator;
     private void Start()
     {
+        //Validator = GetComponent<ValidatorLogin>();
+    }
+    private void OnEnable()
+    {
         Validator = GetComponent<ValidatorLogin>();
     }
     private void Awake()
